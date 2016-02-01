@@ -1,0 +1,787 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\include{Preambule_jo}
+\include{Preambule_mframed}
+\usepackage{pgfplots}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language french
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman lmodern
+\font_sans lmss
+\font_typewriter lmtt
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1.5cm
+\topmargin 1.5cm
+\rightmargin 1.5cm
+\bottommargin 1.5cm
+\headheight 1cm
+\headsep 0.2cm
+\footskip 1cm
+\secnumdepth 5
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language french
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\bullet 0 2 34 -1
+\bullet 1 0 8 -1
+\bullet 2 0 0 -1
+\bullet 3 0 1 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Expression de la vitesse des vagues:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\overrightarrow{v}=\eta_{0}\omega e^{kz}cos(\omega t-kx)\vec{e_{x}}-\eta_{0}\omega e^{kz}sin(\omega t-kx)\vec{e_{z}}$
+\end_inset
+
+ avec 
+\begin_inset Formula $k\eta_{0}\ll1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Expression de la relation de dispersion
+\begin_inset Formula 
+\[
+w^{2}=gk
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Expression de la hauteur des vagues:
+\begin_inset Formula 
+\[
+\eta(x,t)=\eta_{0}\cos\left(\omega t-kx\right)
+\]
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[dashed] (-8,0) -- (8,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+draw[color=blue,domain=-8:7,samples=200]   plot (
+\backslash
+x,{sin((0.85 + 0.6*
+\backslash
+x)  r)});
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[color=blue,latex - latex] (8,1) node[left]{$
+\backslash
+vec{e_z}$} |- (9,0) node[below]{$
+\backslash
+vec{e_x}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[color=blue] (8,0) node{$
+\backslash
+times$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[color=blue] (8,0) circle(4 pt) node[below left ]{$
+\backslash
+vec{e_y}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{scope}[yshift=-0.4 cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{scope}[rotate=12]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[red,thick] (-3,0.75) rectangle (3,-0.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fill[red,thick,opacity=0.2] (-3,0.75) rectangle (3,-0.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[color=red,latex - latex] (0,1) node[above]{$
+\backslash
+vec{e_{zc}}$} |- (1,0) node[right]{$
+\backslash
+vec{e_{xc}}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[color=red,- latex] (0,0) --  (4,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[red] (0,0) node{$
+\backslash
+times$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[red] (0,0) circle(4 pt) node[below left ]{$
+\backslash
+vec{e_{yc}}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{scope}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{scope}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+draw (0,0) node{*};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[shorten >= 6pt] (-4,-0.4) -- (0,-0.4);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (-3.8,0) -- (-3.8,-0.4) node[midway,left]{$z_{0}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[shorten <= 6pt] (0,-0.4) -- (3,-0.4);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[-latex] (2.5,-0.4) arc(0:12:2.5) node[midway, right]{$
+\backslash
+alpha$};
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{axis}[domain=-8:8]     
+\end_layout
+
+\begin_layout Plain Layout
+
+%	
+\backslash
+addplot {cos(deg(5*x))};
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L'équation du mouvement est:
+\begin_inset Formula 
+\begin{eqnarray*}
+PFD & (Oz): & m\ddot{z}=-mg+\Pi_{a,z}\\
+TMC & (Oy): & J\ddot{\alpha}=\mathcal{M}\left(\Pi_{a}\right)_{y}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+-\iintop_{M\in S}P(M)\vec{dS_{M}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[scale=0.75]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[red] (0,0) circle(2.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[latex-latex,red] (0,3)node[left]{$
+\backslash
+vec{e_{zc}}$} |- (3,0) node[below]{$
+\backslash
+vec{e_{yc}}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fill[red] (0,0) circle(2 pt);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[red] (0,0) circle(4 pt) node[below left ]{$
+\backslash
+vec{e_{xc}}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[below right] (0,0) {$
+\backslash
+vec{u_{z}}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[-latex] (0,0) -- (35:2.5) node[above right]{$
+\backslash
+vec{u_{r}}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[-latex] (0,0) -- (125:2.5) node[above left]{$
+\backslash
+vec{u_{
+\backslash
+theta}}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[-latex] (1,0) arc(0:35:1) node[midway,right]{$
+\backslash
+theta$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vec{dF}(M)=-P(M)\vec{dS}
+\]
+
+\end_inset
+
+ La composante suivant 
+\begin_inset Formula $\vec{e_{z}}$
+\end_inset
+
+ est alors: 
+\begin_inset Formula 
+\[
+dF(M)_{z}=-P(M)dS\left(\vec{e_{z}}\cdot\vec{u_{r}}\right)=-P(M)dS\sin\theta\cos\alpha
+\]
+
+\end_inset
+
+De même pour le moment des forces de pression:
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{\mathcal{M}}(\vec{dF})(M) & = & \vec{OM}\land\vec{dF}\\
+ & = & \left(R\vec{u_{r}}+x_{c}\vec{u_{z}}\right)\land\left(-P(M)dS\vec{u_{r}}\right)\\
+ & = & -P(M)x_{c}dS\vec{u_{\theta}}
+\end{eqnarray*}
+
+\end_inset
+
+La composante suivant 
+\begin_inset Formula $\vec{e_{y}}$
+\end_inset
+
+ est alors:
+\begin_inset Formula 
+\[
+\mathcal{M}_{y}(\vec{dF})(M)=-P(M)x_{c}dS\left(\vec{e_{y}}\cdot\vec{u_{\theta}}\right)=P(M)x_{c}\sin\theta dS
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On a trois repère différents.
+ Montrons comment on peut passer de l'un à l'autre:
+\end_layout
+
+\begin_layout Standard
+On a:
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{e_{xc}} & = & \cos\alpha\vec{e_{x}}+\sin\alpha\vec{e_{z}}\\
+\vec{e_{yc}} & = & \vec{e_{y}}\\
+\vec{e_{zc}} & = & -\sin\alpha\vec{e_{x}}+\cos\alpha\vec{e_{z}}
+\end{eqnarray*}
+
+\end_inset
+
+soit la matrice de passage de 
+\begin_inset Formula $\left(\vec{e_{xc}};\vec{e_{yc}};\vec{e_{zc}}\right)$
+\end_inset
+
+ à 
+\begin_inset Formula $\left(\vec{e_{x}};\vec{e_{y}};\vec{e_{z}}\right)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+A_{cyl\rightarrow mer}=\left(\begin{array}{ccc}
+\cos\alpha & 0 & -\sin\alpha\\
+0 & 1 & 0\\
+\sin\alpha & 0 & \cos\alpha
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De même:
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{u_{r}} & = & \cos\theta\vec{e_{yc}}+\sin\theta\vec{e_{zc}}\\
+\vec{u_{\theta}} & = & -\sin\theta\vec{e_{yc}}+\cos\theta\vec{e_{zc}}\\
+\vec{u_{z}} & = & \vec{e_{xc}}
+\end{eqnarray*}
+
+\end_inset
+
+soit la matrice de passage de 
+\begin_inset Formula $\left(\vec{u_{r}};\vec{u_{\theta}};\vec{u_{z}}\right)$
+\end_inset
+
+ à 
+\begin_inset Formula $\left(\vec{e_{xc}};\vec{e_{yc}};\vec{e_{zc}}\right)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+A_{pol\rightarrow cyl}=\left(\begin{array}{ccc}
+0 & 0 & 1\\
+\cos\theta & -\sin\theta & 0\\
+\sin\theta & \cos\theta & 0
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Matrice de passage de la base polaire liée au cylindre à la base cartésienne
+ de référence (la mer):
+\begin_inset Formula 
+\[
+\left(\begin{array}{ccc}
+-\sin\theta\sin\alpha & -\cos\theta\sin\alpha & \cos\alpha\\
+\cos\theta & -\sin\theta & 0\\
+\sin\theta\cos\alpha & \cos\theta\cos\alpha & \sin\alpha
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cette matrice s'obtient en faisant: 
+\begin_inset Formula $A_{cyl\rightarrow mer}\times A_{pol\rightarrow cyl}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Méthode d'Euler:
+\end_layout
+
+\begin_layout Standard
+Les équations d'Euler sont:
+\begin_inset Formula 
+\begin{eqnarray*}
+v_{z}[i+1] & = & v_{z}[i]+\left(\frac{1}{m}\Pi_{a,z}-g\right)dt\\
+\dot{\alpha}[i+1] & = & \dot{\alpha}[i]+\frac{1}{J}\mathcal{M}\left(\vec{\Pi_{a}}\right)_{y}dt\\
+z[i+1] & = & Z[i]+v_{z}[i]dt\\
+\alpha[i+1] & = & \alpha[i]+\dot{\alpha}[i]dt
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Détermination de la position en statique du cylindre:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[thick,red] (0,0) circle(2) node[above]{$O$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[thick,blue] (-4,-0.85) -- (4,-0.85);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fill[blue,opacity=0.2] (-4,-0.85) rectangle (4,-2.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw (0,0) -- (-25.2:2) node[above right]{$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw (0,0) -- (205.2:2) node[midway,above]{$R$} node[above left]{$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[dashed,thin,shorten <=3pt] (0,0) -- (2.5,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[latex-latex] (2.5,-0.85) -- (2.5,0) node[midway,right]{$z_{ini}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw (0,-0.85) -- (0,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw (0,-0.85) --++ (0,4pt) -|++(4pt,-4pt);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw (0,-0.25) arc(-90:-25:0.25) node[midway,below]{$
+\backslash
+gamma$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
